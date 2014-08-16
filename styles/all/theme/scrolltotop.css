@@ -1,0 +1,40 @@
+.scroll-icon {
+	height: 30px;
+	width: 30px;
+	border: 2px solid #000;
+	border-radius: 50%;
+	background-color: #000;
+	opacity: 0.5;
+	position: fixed;
+	bottom: 15px;
+	right: 30px;
+	display: none;
+}
+
+.scroll-icon .scroll-icon-arrow {
+	height: 8px;
+	width: 8px;
+	border: 3px solid;
+	border-right: none;
+	border-top: none;
+	margin: 12px 9px;
+	-webkit-transform: rotate(135deg);
+	-moz-transform: rotate(135deg);
+	-ms-transform: rotate(135deg);
+	-o-transform: rotate(135deg);
+	transform: rotate(135deg);
+	color: white;
+}
+
+.scroll-icon:hover{
+	text-decoration: none;
+	cursor: pointer;
+}
+
+/* responsive design */
+@media only screen and (max-width: 700px), only screen and (max-device-width: 700px) {
+	.scroll-icon {
+		bottom: 8px;
+		right: 8px;
+	}
+}

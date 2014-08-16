@@ -1,0 +1,27 @@
+<div class="scroll-icon"><div class="scroll-icon-arrow"></div></div>
+
+<script>
+
+(function($) {  // Avoid conflicts with other libraries
+
+'use strict';
+
+$(function() {
+	var scrollIcon = $('.scroll-icon');	
+	$(window).scroll(function() {
+		if ($(this).scrollTop() > 140) {
+			scrollIcon.fadeIn();
+		} else {
+			scrollIcon.fadeOut();
+		}
+	});
+	scrollIcon.click(function() {
+		$('html, body').animate({
+			scrollTop: 0
+		}, 500);
+	});	
+});
+
+})(jQuery);
+
+</script>
