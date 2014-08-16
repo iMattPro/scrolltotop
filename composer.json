@@ -1,25 +1,25 @@
 {
 	"name": "vse/scrolltotop",
 	"type": "phpbb-extension",
-    "description": "Adds a scroll to top button making it easy to return to the top of a page.",
-    "homepage": "https://github.com/VSEphpbb/scrolltotop",
-    "version": "1.0.0-dev",
+	"description": "Adds a scroll to top button making it easy to return to the top of a page.",
+	"homepage": "https://github.com/VSEphpbb/scrolltotop",
+	"version": "1.0.0-dev",
 	"license": "GPL-2.0",
 	"authors": [
 		{
-            "name": "Matt Friedman (VSE)",
-            "homepage": "http://mattfriedman.me",
-            "role": "Developer"
+			"name": "Matt Friedman (VSE)",
+			"homepage": "http://mattfriedman.me",
+			"role": "Developer"
 		}
 	],
 	"require": {
-        "php": ">=5.3.3",
-        "composer/installers": "~1.0"
+		"php": ">=5.3.3",
+		"composer/installers": "~1.0"
 	},
 	"extra": {
 		"display-name": "Scroll To Top",
 		"soft-require": {
-            "phpbb/phpbb": ">=3.1.0-RC3,<3.2.*@dev"
+			"phpbb/phpbb": ">=3.1.0-RC3,<3.2.*@dev"
 		}
 	}
 }
