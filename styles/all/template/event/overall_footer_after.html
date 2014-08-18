@@ -15,7 +15,7 @@ $(function() {
 			scrollIcon.fadeOut();
 		}
 	});
-	scrollIcon.click(function() {
+	scrollIcon.bind('click touchstart', function() {
 		$('html, body').animate({
 			scrollTop: 0
 		}, 500);

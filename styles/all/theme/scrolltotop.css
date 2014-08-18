@@ -10,6 +10,7 @@
 	right: 30px;
 	display: none;
 	z-index: 9999;
+	cursor: pointer;
 }
 
 .scroll-icon .scroll-icon-arrow {
@@ -27,8 +28,7 @@
 	color: white;
 }
 
-.scroll-icon:hover{
-	cursor: pointer;
+.notouch .scroll-icon:hover{
 	opacity: 0.8;
 }
 
