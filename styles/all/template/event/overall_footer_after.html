@@ -10,9 +10,9 @@ $(function() {
 	var scrollIcon = $('.scroll-icon');	
 	$(window).scroll(function() {
 		if ($(this).scrollTop() > 140) {
-			scrollIcon.fadeIn().addClass('bounceInUp');
+			scrollIcon.fadeIn();
 		} else {
-			scrollIcon.removeClass('bounceInUp').fadeOut();
+			scrollIcon.fadeOut();
 		}
 	});
 	scrollIcon.click(function() {
