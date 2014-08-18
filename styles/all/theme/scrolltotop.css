@@ -1,4 +1,4 @@
-.scroll-icon {
+.scroll-btn {
 	height: 30px;
 	width: 30px;
 	border: 2px solid #000;
@@ -13,7 +13,7 @@
 	cursor: pointer;
 }
 
-.scroll-icon .scroll-icon-arrow {
+.scroll-btn .scroll-btn-arrow {
 	height: 8px;
 	width: 8px;
 	border: 3px solid;
@@ -28,12 +28,12 @@
 	color: white;
 }
 
-.notouch .scroll-icon:hover{
+.notouch .scroll-btn:hover{
 	opacity: 0.8;
 }
 
 @media only screen and (max-width: 700px), only screen and (max-device-width: 700px) {
-	.scroll-icon {
+	.scroll-btn {
 		bottom: 8px;
 		right: 8px;
 	}

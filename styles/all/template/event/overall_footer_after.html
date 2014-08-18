@@ -1,4 +1,6 @@
-<div class="scroll-icon"><div class="scroll-icon-arrow"></div></div>
+<div class="scroll-btn">
+	<div class="scroll-btn-arrow"></div>
+</div>
 
 <script>
 
@@ -7,15 +9,15 @@
 'use strict';
 
 $(function() {
-	var scrollIcon = $('.scroll-icon');	
+	var scrollBtn = $('.scroll-btn');	
 	$(window).scroll(function() {
 		if ($(this).scrollTop() > 140) {
-			scrollIcon.fadeIn();
+			scrollBtn.fadeIn();
 		} else {
-			scrollIcon.fadeOut();
+			scrollBtn.fadeOut();
 		}
 	});
-	scrollIcon.bind('click touchstart', function() {
+	scrollBtn.bind('click touchstart', function() {
 		$('html, body').animate({
 			scrollTop: 0
 		}, 500);
