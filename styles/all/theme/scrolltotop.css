@@ -9,6 +9,7 @@
 	bottom: 15px;
 	right: 30px;
 	display: none;
+	z-index: 9999;
 }
 
 .scroll-icon .scroll-icon-arrow {
