@@ -4,13 +4,13 @@
 	border: 2px solid #000;
 	border-radius: 50%;
 	background-color: #000;
-	opacity: 0.5;
 	position: fixed;
 	bottom: 15px;
 	right: 30px;
-	display: none;
+	opacity: 0.5;
 	z-index: 9999;
 	cursor: pointer;
+	display: none;
 }
 
 .scroll-btn .scroll-btn-arrow {
@@ -28,9 +28,7 @@
 	color: white;
 }
 
-.notouch .scroll-btn:hover{
-	opacity: 0.8;
-}
+.notouch .scroll-btn:hover { opacity: 0.8 }
 
 @media only screen and (max-width: 700px), only screen and (max-device-width: 700px) {
 	.scroll-btn {
