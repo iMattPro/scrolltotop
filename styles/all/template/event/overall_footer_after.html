@@ -7,19 +7,27 @@
 'use strict';
 
 $(function() {
-	var scrollBtn = $('.scroll-btn');	
+	var settings = {
+		min: 200,
+		scrollSpeed: 400
+	};
+	var toTop = $('.scroll-btn');
+	var toTopHidden = true;
 	$(window).scroll(function() {
-		if ($(this).scrollTop() > 140) {
-			scrollBtn.fadeIn();
-		} else {
-			scrollBtn.fadeOut();
+		var pos = $(this).scrollTop();
+		if (pos > settings.min && toTopHidden) {
+			toTop.fadeIn();
+			toTopHidden = false;
+		} else if(pos <= settings.min && !toTopHidden) {
+			toTop.fadeOut();
+			toTopHidden = true;
 		}
 	});
-	scrollBtn.bind('click touchstart', function() {
+	toTop.bind('click touchstart', function() {
 		$('html, body').animate({
 			scrollTop: 0
-		}, 500);
-	});	
+		}, settings.scrollSpeed);
+	});
 });
 
 })(jQuery);
