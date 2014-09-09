@@ -16,10 +16,10 @@ $(function() {
 	$(window).scroll(function() {
 		var pos = $(this).scrollTop();
 		if (pos > settings.min && toTopHidden) {
-			toTop.fadeIn();
+			toTop.stop().fadeIn();
 			toTopHidden = false;
 		} else if(pos <= settings.min && !toTopHidden) {
-			toTop.fadeOut();
+			toTop.stop().fadeOut();
 			toTopHidden = true;
 		}
 	});
