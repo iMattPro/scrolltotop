@@ -10,9 +10,10 @@ $(function() {
 	var settings = {
 		min: 200,
 		scrollSpeed: 400
-	};
-	var toTop = $('.scroll-btn');
-	var toTopHidden = true;
+		},
+		toTop = $('.scroll-btn'),
+		toTopHidden = true;
+
 	$(window).scroll(function() {
 		var pos = $(this).scrollTop();
 		if (pos > settings.min && toTopHidden) {
@@ -23,6 +24,7 @@ $(function() {
 			toTopHidden = true;
 		}
 	});
+
 	toTop.bind('click touchstart', function() {
 		$('html, body').animate({
 			scrollTop: 0
