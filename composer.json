@@ -23,8 +23,8 @@
 		},
 		"version-check": {
 			"host": "vsephpbb.github.io",
-			"directory": "/scrolltotop",
-			"filename": "version.json"
+			"directory": "/version",
+			"filename": "scrolltotop.json"
 		}
 	}
 }
