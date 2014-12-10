@@ -22,9 +22,9 @@
 			"phpbb/phpbb": ">=3.1.0-RC3,<3.2.*@dev"
 		},
 		"version-check": {
-			"host": "vsephpbb.github.io",
-			"directory": "/version",
-			"filename": "scrolltotop.json"
+			"host": "www.phpbb.com",
+			"directory": "/customise/db/extension/scrolltotop",
+			"filename": "version_check"
 		}
 	}
 }
