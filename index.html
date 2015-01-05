@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>ScrollToTop Demo</title>
+	<link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+	<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+	<style>
+		html, body {
+			font-family: 'Raleway', sans-serif;
+			font-size: 18px;
+			height: 100%;
+			text-align: center;
+			margin: 0;
+			padding: 0;
+			background: rgba(212,228,239,1);
+		}
+		h2 { font-size: 48px; }
+		.content {
+			margin: 50px 0 0 0;
+			height: 2160px;
+			background: rgba(212,228,239,1);
+			background: -moz-linear-gradient(top, rgba(212,228,239,1) 0%, rgba(134,174,204,1) 100%);
+			background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(212,228,239,1)), color-stop(100%, rgba(134,174,204,1)));
+			background: -webkit-linear-gradient(top, rgba(212,228,239,1) 0%, rgba(134,174,204,1) 100%);
+			background: -o-linear-gradient(top, rgba(212,228,239,1) 0%, rgba(134,174,204,1) 100%);
+			background: -ms-linear-gradient(top, rgba(212,228,239,1) 0%, rgba(134,174,204,1) 100%);
+			background: linear-gradient(to bottom, rgba(212,228,239,1) 0%, rgba(134,174,204,1) 100%);
+			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d4e4ef', endColorstr='#86aecc', GradientType=0 );
+		}
+		.scroll-text {
+			display: none;
+			position: fixed;
+			top: 40%;
+			width: 100%;
+		}
+		.scroll-text p {
+			margin: 0 auto;
+			width: 80%;
+			line-height: 1.5em;
+		}
+		.scroll-btn {
+			height: 30px;
+			width: 30px;
+			border: 2px solid #000;
+			border-radius: 50%;
+			background-color: #000;
+			position: fixed;
+			bottom: 50px;
+			left: 50%;
+			opacity: 0.5;
+			z-index: 9999;
+			cursor: pointer;
+			display: none;
+			margin-left: -15px;
+		}
+		.scroll-btn .scroll-btn-arrow {
+			height: 8px;
+			width: 8px;
+			border: 3px solid;
+			border-right: none;
+			border-top: none;
+			margin: 12px 9px;
+			-webkit-transform: rotate(135deg);
+			-moz-transform: rotate(135deg);
+			-ms-transform: rotate(135deg);
+			-o-transform: rotate(135deg);
+			transform: rotate(135deg);
+			color: white;
+		}
+		.animated { 
+			-webkit-animation-duration: 1s; 
+			animation-duration: 1s; 
+			-webkit-animation-fill-mode: both; 
+			animation-fill-mode: both; 
+			animation-iteration-count:infinite; 
+			-webkit-animation-iteration-count:infinite; 
+		} 
+		@-webkit-keyframes bounce { 
+			0% {-webkit-transform: translateY(0);} 
+			50% {-webkit-transform: translateY(15px);} 
+			100% {-webkit-transform: translateY(0);} 
+		} 
+		@keyframes bounce { 
+			0% {-webkit-transform: translateY(0);} 
+			50% {-webkit-transform: translateY(15px);} 
+			100% {-webkit-transform: translateY(0);} 
+		}
+		.bounce { 
+			-webkit-animation-name: bounce; 
+			animation-name: bounce; 
+		}
+		@media only screen and (max-width: 700px), only screen and (max-device-width: 700px) {
+			h2 { font-size: 24px; }
+			.scroll-text { top: 25%; }
+		}
+	</style>
+</head>
+<body>
+<div class="content">
+	<div class="welcome">
+		<h2>Go ahead...</h2>
+		<h2><i class="fa fa-arrow-down animated bounce"></i> Scroll down the page <i class="fa fa-arrow-down animated bounce"></i></h2>
+	</div>
+	<div class="scroll-text fade">
+		<p>
+			There is the scroll back to top of page button.<br />
+			In a phpBB 3.1 forum, it will appear on the right side of the window.<br />
+			But for this demo, centered looked more awesome ;-)
+		</p>
+	</div>
+	<div class="scroll-btn fade" title="Scroll to top"><div class="scroll-btn-arrow"></div></div>
+</div>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script>
+(function($) {
+'use strict';
+$(function() {
+	var settings = {
+		min: 200,
+		scrollSpeed: 400
+	};
+	var toTop = $('.scroll-btn');
+	var fadeGrp = $('.fade');
+	var toTopHidden = true;
+	$(window).scroll(function() {
+		var pos = $(this).scrollTop();
+		if (pos > settings.min && toTopHidden) {
+			fadeGrp.stop().fadeIn();
+			toTopHidden = false;
+		} else if(pos <= settings.min && !toTopHidden) {
+			fadeGrp.stop().fadeOut();
+			toTopHidden = true;
+		}
+	});
+	toTop.bind('click touchstart', function() {
+		$('html, body').animate({
+			scrollTop: 0
+		}, settings.scrollSpeed);
+	});
+});
+})(jQuery);
+</script>
+</body>
+</html>
