@@ -5,7 +5,7 @@ This phpBB 3.1 extension adds a scroll to top button making it easy to return to
 Try a live demo [here](http://vsephpbb.github.io/scrolltotop/).
 
 ## Requirements
-* phpBB 3.1.0-RC2 or higher
+* phpBB 3.1.2 or higher
 * PHP 5.3.3 or higher
 
 ## Installation

@@ -19,7 +19,7 @@
 	"extra": {
 		"display-name": "Scroll To Top",
 		"soft-require": {
-			"phpbb/phpbb": ">=3.1.0-RC3,<3.2.*@dev"
+			"phpbb/phpbb": ">=3.1.2,<3.2.*@dev"
 		},
 		"version-check": {
 			"host": "www.phpbb.com",
