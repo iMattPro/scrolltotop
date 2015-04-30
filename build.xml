@@ -2,7 +2,6 @@
 <project name="Scroll To Top" description="Builds an extension.zip from a git repository" default="all">
 	<property name="vendor-name" value="vse" />
 	<property name="extension-name" value="scrolltotop" />
-	<property name="version" value="1.0.1-dev" override="true" />
 	<!--
 	Only set this to "true" if you have dependencies in the composer.json,
 	otherwise use "false".
@@ -32,6 +31,7 @@
 	TODO: DO NOT EDIT BELOW THIS LINE!!!!
 	-->
 
+	<property name="version" value="HEAD" override="true" />
 	<property name="build-directory" value="build" override="true" />
 	<property name="package-directory" value="${build-directory}/package/${vendor-name}/${extension-name}" />
 
@@ -64,7 +64,7 @@
 		<echo msg="Extracting ${version}" />
 
 		<phingcall target="git-checkout">
-			<property name="archive-version" value="HEAD" />
+			<property name="archive-version" value="${version}" />
 		</phingcall>
 
 		<if>
@@ -80,7 +80,7 @@
 		</phingcall>
 
 		<phingcall target="wrap-package">
-			<property name="destination-filename" value="${build-directory}/upload/${vendor-name}_${extension-name}_${version}" />
+			<property name="destination-filename" value="${build-directory}/upload/${vendor-name}_${extension-name}-${version}" />
 		</phingcall>
 	</target>
 
