@@ -68,27 +68,27 @@
 			transform: rotate(135deg);
 			color: white;
 		}
-		.animated { 
-			-webkit-animation-duration: 1s; 
-			animation-duration: 1s; 
-			-webkit-animation-fill-mode: both; 
-			animation-fill-mode: both; 
-			animation-iteration-count:infinite; 
-			-webkit-animation-iteration-count:infinite; 
-		} 
-		@-webkit-keyframes bounce { 
-			0% {-webkit-transform: translateY(0);} 
-			50% {-webkit-transform: translateY(15px);} 
-			100% {-webkit-transform: translateY(0);} 
-		} 
-		@keyframes bounce { 
-			0% {-webkit-transform: translateY(0);} 
-			50% {-webkit-transform: translateY(15px);} 
-			100% {-webkit-transform: translateY(0);} 
+		.animated {
+			-webkit-animation-duration: 1s;
+			animation-duration: 1s;
+			-webkit-animation-fill-mode: both;
+			animation-fill-mode: both;
+			animation-iteration-count:infinite;
+			-webkit-animation-iteration-count:infinite;
 		}
-		.bounce { 
-			-webkit-animation-name: bounce; 
-			animation-name: bounce; 
+		@-webkit-keyframes bounce {
+			0% {-webkit-transform: translateY(0);}
+			50% {-webkit-transform: translateY(15px);}
+			100% {-webkit-transform: translateY(0);}
+		}
+		@keyframes bounce {
+			0% {-webkit-transform: translateY(0);}
+			50% {-webkit-transform: translateY(15px);}
+			100% {-webkit-transform: translateY(0);}
+		}
+		.bounce {
+			-webkit-animation-name: bounce;
+			animation-name: bounce;
 		}
 		@media only screen and (max-width: 700px), only screen and (max-device-width: 700px) {
 			h2 { font-size: 24px; }
@@ -126,10 +126,10 @@ $(function() {
 	$(window).scroll(function() {
 		var pos = $(this).scrollTop();
 		if (pos > settings.min && toTopHidden) {
-			fadeGrp.stop().fadeIn();
+			fadeGrp.stop(true, true).fadeIn();
 			toTopHidden = false;
 		} else if(pos <= settings.min && !toTopHidden) {
-			fadeGrp.stop().fadeOut();
+			fadeGrp.stop(true, true).fadeOut();
 			toTopHidden = true;
 		}
 	});
