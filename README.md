@@ -9,10 +9,10 @@ Try a live demo [here](http://vsephpbb.github.io/scrolltotop/).
 * PHP 5.3.3 or higher
 
 ## Installation
-1. [Download the latest release](https://github.com/VSEphpbb/scrolltotop/releases) and unzip it.
-2. Copy the entire contents from the unzipped folder to `phpBB/ext/vse/scrolltotop/`.
+1. [Download the latest validated release](https://www.phpbb.com/customise/db/extension/scrolltotop/).
+2. Unzip the downloaded release and copy it to the `ext` directory of your phpBB board.
 3. Navigate in the ACP to `Customise -> Manage extensions`.
-4. Find Scroll To Top under "Disabled Extensions" and click `Enable`.
+4. Look for `Scroll To Top` under the Disabled Extensions list, and click its `Enable` link.
 
 ## Uninstallation
 1. Navigate in the ACP to `Customise -> Manage extensions`.
