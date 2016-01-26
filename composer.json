@@ -1,7 +1,7 @@
 {
 	"name": "vse/scrolltotop",
 	"type": "phpbb-extension",
-	"description": "A phpBB 3.1 extension that adds a scroll to top button making it easy to return to the top of a page.",
+	"description": "A phpBB extension that adds a scroll to top button making it easy to return to the top of a page.",
 	"homepage": "https://github.com/VSEphpbb/scrolltotop",
 	"version": "1.0.1",
 	"license": "GPL-2.0",
