@@ -1,38 +1,40 @@
 .scroll-btn {
-	height: 30px;
-	width: 30px;
-	border: 2px solid #000;
+	background-color: #000000;
+	border: 2px solid #000000;
 	border-radius: 50%;
-	background-color: #000;
-	position: fixed;
-	bottom: 45px;
-	right: 15px;
 	opacity: 0.5;
+	position: fixed;
+	right: 15px;
+	bottom: 45px;
 	z-index: 9999;
-	cursor: pointer;
 	display: none;
+	width: 30px;
+	height: 30px;
+	cursor: pointer;
 }
 
 .scroll-btn .scroll-btn-arrow {
-	height: 8px;
-	width: 8px;
 	border: 3px solid;
-	border-right: none;
 	border-top: none;
+	border-right: none;
+	color: #ffffff;
+	width: 8px;
+	height: 8px;
 	margin: 12px 9px;
-	-webkit-transform: rotate(135deg);
 	-moz-transform: rotate(135deg);
 	-ms-transform: rotate(135deg);
 	-o-transform: rotate(135deg);
+	-webkit-transform: rotate(135deg);
 	transform: rotate(135deg);
-	color: white;
 }
 
-.notouch .scroll-btn:hover { opacity: 0.8 }
+.notouch .scroll-btn:hover {
+	opacity: 0.8;
+}
 
 @media only screen and (max-width: 700px), only screen and (max-device-width: 700px) {
 	.scroll-btn {
-		bottom: 8px;
 		right: 8px;
+		bottom: 8px;
 	}
 }
