@@ -22,4 +22,4 @@ Try a live demo [here](http://vsephpbb.github.io/scrolltotop/).
 ## License
 [GNU General Public License v2](http://opensource.org/licenses/GPL-2.0)
 
-© 2014 - Matt Friedman (VSE)
+© 2014 - Matt Friedman
